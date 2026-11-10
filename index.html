@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ChatApp</title>
+
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+    <div class="chat-container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <!-- PROFILE -->
+
+            <div class="profile">
+
+                <div class="profile-left">
+
+                    <div class="profile-image">
+                        👤
+                    </div>
+
+                    <div class="profile-details">
+
+                        <h3 id="profileName">
+                            User
+                        </h3>
+
+                        <span class="online-text">
+                            ● Online
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <button id="logoutBtn" class="logout-btn">
+                    Logout
+                </button>
+
+            </div>
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search users..."
+                >
+
+            </div>
+
+            <!-- USERS -->
+
+            <div class="users">
+
+                <div
+                    class="user active"
+                    data-name="Alex"
+                    data-initial="A"
+                    data-status="Online"
+                >
+
+                    <div class="user-image">
+                        A
+                    </div>
+
+                    <div class="user-info">
+
+                        <h4>Alex</h4>
+
+                        <p>Hey! How are you?</p>
+
+                    </div>
+
+                    <span class="status"></span>
+
+                </div>
+
+                <div
+                    class="user"
+                    data-name="John"
+                    data-initial="J"
+                    data-status="Online"
+                >
+
+                    <div class="user-image">
+                        J
+                    </div>
+
+                    <div class="user-info">
+
+                        <h4>John</h4>
+
+                        <p>See you tomorrow!</p>
+
+                    </div>
+
+                    <span class="status"></span>
+
+                </div>
+
+                <div
+                    class="user"
+                    data-name="Sarah"
+                    data-initial="S"
+                    data-status="Online"
+                >
+
+                    <div class="user-image">
+                        S
+                    </div>
+
+                    <div class="user-info">
+
+                        <h4>Sarah</h4>
+
+                        <p>That's great!</p>
+
+                    </div>
+
+                    <span class="status"></span>
+
+                </div>
+
+                <div
+                    class="user"
+                    data-name="David"
+                    data-initial="D"
+                    data-status="Offline"
+                >
+
+                    <div class="user-image">
+                        D
+                    </div>
+
+                    <div class="user-info">
+
+                        <h4>David</h4>
+
+                        <p>Good morning!</p>
+
+                    </div>
+
+                    <span class="status offline"></span>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+        <!-- CHAT AREA -->
+
+        <main class="chat-area">
+
+            <!-- CHAT HEADER -->
+
+            <header class="chat-header">
+
+                <div class="chat-user">
+
+                    <div
+                        class="chat-user-image"
+                        id="chatUserImage"
+                    >
+                        A
+                    </div>
+
+                    <div>
+
+                        <h3 id="chatUserName">
+                            Alex
+                        </h3>
+
+                        <span id="chatStatus">
+                            ● Online
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <!-- MESSAGES -->
+
+            <div class="messages" id="messages">
+
+                <div class="message received">
+
+                    <div class="message-content">
+
+                        <p>
+                            Hey! How are you?
+                        </p>
+
+                        <span>
+                            10:30 AM
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="message sent">
+
+                    <div class="message-content">
+
+                        <p>
+                            I'm good! How about you?
+                        </p>
+
+                        <span>
+                            10:31 AM
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="message received">
+
+                    <div class="message-content">
+
+                        <p>
+                            I'm doing great! 😊
+                        </p>
+
+                        <span>
+                            10:32 AM
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- TYPING -->
+
+            <div id="typing" class="typing">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <label id="typingName">
+                    Alex is typing...
+                </label>
+
+            </div>
+
+            <!-- INPUT -->
+
+            <div class="message-input">
+
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Type a message..."
+                    autocomplete="off"
+                >
+
+                <button
+                    id="sendBtn"
+                    title="Send message"
+                >
+                    ➤
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
